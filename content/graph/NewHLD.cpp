@@ -49,11 +49,11 @@ int ans(int a, int b){
     while(top[a] != top[b]){
         if(dep[top[a]] < dep[top[b]])
             swap(a,b);
-        ret = max(ret, sg.query(id[top[a]] , id[a] + 1));
+        ret = max(ret, sg.query(id[top[a]] , id[a]));
         a = p[top[a]];
     }
     if(dep[a] > dep[b])
         swap(a,b);
-    ret = max(ret, sg.query(id[a] , id[b] + 1));
+    ret = max(ret, sg.query(id[a] , id[b]));
     return ret;
 }

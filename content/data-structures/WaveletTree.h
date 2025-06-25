@@ -83,31 +83,31 @@ struct wavelet_tree {
 };
 wavelet_tree t;
 int a[MAXN];
-int main() {
-  int i, j, k, n, m, q, l, r;
-  cin >> n;
-  for(i = 1; i <= n; i++) cin >> a[i];
-  t.init(a + 1, a + n + 1, -MAXV, MAXV);
-  //beware! after the init() operation array a[] will not be same
-  cin >> q;
-  while(q--) {
-    int x;
-    cin >> x;
-    cin >> l >> r >> k;
-    if(x == 0) {
-      //kth smallest
-      cout << t.kth(l, r, k) << endl;
-    } else if(x == 1) {
-      //less than or equal to K
-      cout << t.LTE(l, r, k) << endl;
-    } else if(x == 2) {
-      //count occurence of K in [l, r]
-      cout << t.count(l, r, k) << endl;
-    }
-    if(x == 3) {
-      //sum of elements less than or equal to K in [l, r]
-      cout << t.sum(l, r, k) << endl;
-    }
-  }
-  return 0;
-}
+// int main() {
+//   int i, j, k, n, m, q, l, r;
+//   cin >> n;
+//   for(i = 1; i <= n; i++) cin >> a[i];
+//   t.init(a + 1, a + n + 1, -MAXV, MAXV);
+//   //beware! after the init() operation array a[] will not be same
+//   cin >> q;
+//   while(q--) {
+//     int x;
+//     cin >> x;
+//     cin >> l >> r >> k;
+//     if(x == 0) {
+//       //kth smallest
+//       cout << t.kth(l, r, k) << endl;
+//     } else if(x == 1) {
+//       //less than or equal to K
+//       cout << t.LTE(l, r, k) << endl;
+//     } else if(x == 2) {
+//       //count occurence of K in [l, r]
+//       cout << t.count(l, r, k) << endl;
+//     }
+//     if(x == 3) {
+//       //sum of elements less than or equal to K in [l, r]
+//       cout << t.sum(l, r, k) << endl;
+//     }
+//   }
+//   return 0;
+// }

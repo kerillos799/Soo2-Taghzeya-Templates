@@ -5,7 +5,7 @@ tested using https://cses.fi/problemset/task/1648/
 struct seg_tree{
     vector<ll> tree;
     int sz;
-    seg_tree(int n, vector<ll> &arr) : sz(arr.size()) , tree(4*n){
+    seg_tree(vector<ll> &arr) : sz(arr.size()) , tree(4*n){
         build(0 , sz - 1, 1, arr);
     }
     void build(int l, int r, int node, vector<ll> &a){

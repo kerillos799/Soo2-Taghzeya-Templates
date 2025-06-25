@@ -1,5 +1,5 @@
 struct AhoCorasick {
-    static int ALPHA = 26;
+    static constexpr int ALPHA = 26;
     struct Node { // lower cases, adjust accordindly 
         array<int, ALPHA> next;
         int link, out_link;
